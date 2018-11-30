@@ -1,0 +1,15 @@
+target/
+logs/
+*.class
+build
+.settings/
+.project
+.apt_generated
+.factorypath
+sql/
+admin-logs/
+.springBeans
+.classpath
+src/main/resources/rebel.xml
+*.iml
+src/main/java/*.sql
