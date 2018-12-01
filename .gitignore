@@ -1,1 +1,19 @@
+<<<<<<< HEAD
 /target/
+=======
+target/
+logs/
+*.class
+build
+.settings/
+.project
+.apt_generated
+.factorypath
+sql/
+admin-logs/
+.springBeans
+.classpath
+src/main/resources/rebel.xml
+*.iml
+src/main/java/*.sql
+>>>>>>> 9eb1ecb1a99dab76c9421e82d63d00eeb8c7abff
