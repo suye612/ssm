@@ -89,6 +89,13 @@
             <artifactId>mybatis</artifactId>  
             <version>${mybatis.version}</version>  
         </dependency>  
+        <!--mybatis plus  -->
+        <dependency>
+		    <groupId>com.baomidou</groupId>
+		    <artifactId>mybatis-plus</artifactId>
+		    <version>3.0.6</version>
+		</dependency>
+        
          <!-- mybatis/spring包 -->  
         <dependency>  
             <groupId>org.mybatis</groupId>  
@@ -173,6 +180,13 @@
             <artifactId>commons-codec</artifactId>  
             <version>1.9</version>  
         </dependency>
+        <!--lombok 插件  -->
+        <dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.16.18</version>
+		    <scope>provided</scope>
+		</dependency>
   </dependencies>
   <build>
   <plugins>
