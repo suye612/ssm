@@ -12,9 +12,8 @@ import com.ytj.ssm.service.IStudentService;
 @Service("studentService")
 public class StudentServiceImpl implements IStudentService{
 	@Resource
-	private StudentDao studentDao; 
-	
-	@Override
+	private StudentDao studentDao;
+
 	public StudentModel studentByName(String name) {
 		StudentModel studentModel = studentDao.studentByName(name);
 		return studentModel;
