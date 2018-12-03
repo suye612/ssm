@@ -3,10 +3,11 @@ package com.ytj.ssm.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.ytj.ssm.util.ToolUtil;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import com.ytj.ssm.model.StudentModel;
 import com.ytj.ssm.service.IStudentService;
@@ -17,21 +18,13 @@ public class StudentController {
 	@Resource
 	private IStudentService studentService;
 	
-	@RequestMapping(value = "login",method = RequestMethod.POST)
-	public String login(HttpServletRequest request,Model model) {
-		String name = request.getParameter("name");
-		StudentModel student = studentService.studentByName(name);
-		model.addAttribute("student",student);
-		return "login";
+	@RequestMapping(value = "/queryAll",method = RequestMethod.POST)
+	@ResponseBody
+	public Object queryAll(@RequestParam(value = "page" ,defaultValue = "1") Integer page, Integer pageSize, StudentModel student) {
+		//查询全部
+        if (ToolUtil.isOneEmpty(page, pageSize)) {
+
+        }
+		return 	studentService.queryAll(page,pageSize,student);
 	}
-	
-	/*public void t(){
-		QueryWrapper<StudentModel> wrapper = new EmptyWrapper<StudentModel>().and(i ->i.eq("name", "小明")
-				.eq("sex", "nan"));
-		List<StudentModel> list = studentService.list(wrapper);
-		StudentModel entity = null;
-		studentService.update(entity, wrapper);
-		studentService.remove(wrapper);
-		}*/
-	
 }

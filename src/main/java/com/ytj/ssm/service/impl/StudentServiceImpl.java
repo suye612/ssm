@@ -22,4 +22,16 @@ public class StudentServiceImpl extends ServiceImpl<BaseMapper<StudentModel> , S
 		return studentModel;
 	}
 
+	@Override
+	public Object queryAll(Integer page, Integer pageSize, StudentModel student) {
+		int count=studentDao.queryAllCount(student);
+		//这里是分页
+
+
+
+
+
+		return studentDao.queryAll( page,  pageSize,  student);
+	}
+
 }

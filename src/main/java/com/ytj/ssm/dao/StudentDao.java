@@ -5,4 +5,8 @@ import com.ytj.ssm.model.StudentModel;
 
 public interface StudentDao extends BaseMapper{
 	public StudentModel studentByName(String name);
+
+	 Integer queryAllCount(StudentModel student);
+
+	Object queryAll(Integer page, Integer pageSize, StudentModel student);
 }
