@@ -45,12 +45,12 @@
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
         <!-- 自动扫描mapping.xml文件 -->  
-        <property name="mapperLocations" value="classpath:com/ytj/ssm/mapper/*.xml"></property>  
+        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
          <!-- 别名处理 -->
       <property name="typeAliasesPackage" value="com.atguigu.mp.beans"></property>      
       
       <!-- 注入全局MP策略配置 -->
-      <property name="globalConfig" ref="globalConfiguration"></property>
+      <!-- <property name="globalConfig" ref="globalConfiguration"></property> -->
     </bean>  
   
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
