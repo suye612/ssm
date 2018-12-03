@@ -13,3 +13,6 @@ admin-logs/
 src/main/resources/rebel.xml
 *.iml
 src/main/java/*.sql
+*.md
+.idea
+
