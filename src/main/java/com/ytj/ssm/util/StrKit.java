@@ -110,7 +110,7 @@ public class StrKit {
 	 * @return 是否包含空字符串
 	 */
 	public static boolean hasBlank(String... strs) {
-		if (com.yrs.core.support.CollectionKit.isEmpty(strs)) {
+		if (CollectionKit.isEmpty(strs)) {
 			return true;
 		}
 		for (String str : strs) {
@@ -128,7 +128,7 @@ public class StrKit {
 	 * @return 所有字符串是否为空白
 	 */
 	public static boolean isAllBlank(String... strs) {
-		if (com.yrs.core.support.CollectionKit.isEmpty(strs)) {
+		if (CollectionKit.isEmpty(strs)) {
 			return true;
 		}
 		for (String str : strs) {
@@ -209,7 +209,7 @@ public class StrKit {
 	 * @return 是否包含空字符串
 	 */
 	public static boolean hasEmpty(String... strs) {
-		if (com.yrs.core.support.CollectionKit.isEmpty(strs)) {
+		if (CollectionKit.isEmpty(strs)) {
 			return true;
 		}
 
@@ -228,7 +228,7 @@ public class StrKit {
 	 * @return 是否全部为空字符串
 	 */
 	public static boolean isAllEmpty(String... strs) {
-		if (com.yrs.core.support.CollectionKit.isEmpty(strs)) {
+		if (CollectionKit.isEmpty(strs)) {
 			return true;
 		}
 
@@ -942,7 +942,7 @@ public class StrKit {
 	 * @return 格式化后的文本
 	 */
 	public static String format(String template, Object... values) {
-		if (com.yrs.core.support.CollectionKit.isEmpty(values) || isBlank(template)) {
+		if (CollectionKit.isEmpty(values) || isBlank(template)) {
 			return template;
 		}
 
